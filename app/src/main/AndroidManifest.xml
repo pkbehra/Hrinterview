@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/hrlogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.HRinterview">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Remember"></activity>
+        <activity android:name=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

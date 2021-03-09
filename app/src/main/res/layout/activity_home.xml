@@ -61,7 +61,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="Fresher Question"
+                    android:text="Freshers Questions"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -127,7 +127,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="Exprience Question"
+                    android:text="Experienced Questions"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -192,7 +192,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:text="Things to Remember"
+                    android:text="Things to Remember!"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />

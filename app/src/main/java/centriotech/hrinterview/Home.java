@@ -1,8 +1,10 @@
 package centriotech.hrinterview;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -39,20 +41,31 @@ public class Home extends AppCompatActivity {
         rember.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Home.this, "Things to Remember", Toast.LENGTH_SHORT).show();
+              Intent intent=new Intent(Home.this,Remember.class);
+              startActivity(intent);
             }
         });
 
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Home.this, "About Us", Toast.LENGTH_SHORT).show();
+                AlertDialog alertDialog = new AlertDialog.Builder(Home.this).create(); //Read Update
+                alertDialog.setTitle("hi");
+                alertDialog.setMessage("We are an IT Company work on different sectors such as Web Development, Web Designing, Android Development, Software Development, Hosting Solution, Etc ");
+                alertDialog.show();
+
             }
         });
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Home.this, "Share", Toast.LENGTH_SHORT).show();
+                Intent sharingIntent =new Intent((Intent.ACTION_SEND));
+                sharingIntent.setType("text/plain");
+                String shareBody="https://play.google.com/store/apps/details?id=com.centriotech.centriotech";
+                String shareSubject="HR Interview";
+                sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
+                startActivity(Intent.createChooser(sharingIntent,"Share Using"));
             }
         });
 
